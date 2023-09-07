@@ -1,3 +1,6 @@
 
-//ce fichier permet de faire la correspondace entre les différents fichiers .scss et le fichier style.css
+/* Ce fichier est une source map générée par Sass pour établir une 
+correspondanceentre le code CSS généré et le code source Sass original. 
+Il ne doit pas être modifié manuellement. */
+
 {"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
