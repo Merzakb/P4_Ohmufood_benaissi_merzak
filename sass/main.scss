@@ -1,0 +1,27 @@
+//dans cette page on importe tous nos fichiers scss
+//c'est la seule page qui regroupe tous notre code en scss  
+//et c'est à partir d'elle que notre code sera complier en css
+//sur la page style.css
+
+
+//L'ajout de @charset 'utf-8'; au début de votre fichier Sass 
+//indique au navigateur que le fichier CSS généré doit être interprété 
+//en utilisant l'encodage UTF-8.
+@charset 'utf-8';
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/keyframes";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+@import "./components/loader";
+
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/footer";
+
+@import "./pages/home";
+@import "./pages/restaurants";
