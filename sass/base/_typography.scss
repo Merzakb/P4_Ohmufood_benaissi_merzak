@@ -1,0 +1,24 @@
+// general typography 
+body {
+    font-family: $body-font-familly;
+    font-size: $bdoy-font-size;
+    font-weight: $body-font-weight;
+    line-height: 1.4;
+    color: $txt-color-primary;
+}
+
+//home page - section title
+.home-title {
+    font-size: $title-font-size;
+    font-weight: $title-font-weight;
+    color: $txt-color-primary;
+}
+
+//restaurants pages - title
+.restaurant__title{
+    font-family: $title-font-familly;
+    font-size: $title-highlight-font-size;
+    font-weight: $title-font-weight;
+    color: $txt-color-primary;
+}
+
