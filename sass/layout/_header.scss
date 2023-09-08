@@ -1,0 +1,41 @@
+//header sur toutes les pgaes//
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__logo{
+        display: flex;
+        align-self: stretch;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    //home page location
+    &__location {
+        display: flex;
+        align-self: stretch;
+        height: 3.125rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1.0625rem;
+        font-weight: $body-heighlight-font-weight;
+        color: $bg-footer-color;
+        background-color: $bg-main-color-variant;
+        font-size: $bdoy-font-size;
+    }
+
+    //restaurant page arrow to back
+    &__back{
+        font-size: $title-font-size;
+        flex-shrink: 0;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        color: $bg-footer-color;
+    }
+}
