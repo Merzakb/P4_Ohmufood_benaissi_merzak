@@ -1,0 +1,129 @@
+//style pour les pages restaurants
+
+//la photo sous le header
+.resto-hero-header {
+    display: flex;
+    align-self: stretch;
+    height: 17.88rem;
+    img{
+        width: 100%;
+    }
+}
+
+//le style général de la section restaurant
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 2.5rem;
+    margin-top: -3rem;//pour faire monter 
+    position: relative;//la card en haut et 
+    z-index: 1000;// se sperposer sur la photo
+    border-radius: 2.5rem 2.5rem 0 0;
+    background-color: $bg-main-color;
+    padding: 2rem 0.81rem 0 0.81rem;
+//le nom  du restaurant
+    &__title{
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: start;
+        justify-content: space-between;
+        .fa-heart {
+            margin: 0 1.5rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+}
+
+
+//style globla des cards (entrées, plats, desserts)
+.menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    &__title {
+        font-size: $bdoy-font-size;
+        font-weight: $body-font-weight;
+        text-transform: uppercase;
+        
+        //la ligne verte sous les titres 
+        &::after{
+            content: '';
+            display: block;
+            width: 2.5rem;
+            height: 0.1875rem;
+            background: $color-tertiary;
+        }
+    }
+}
+
+//style de chaque article en particulier
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: $main-border-radius;
+    height: 4.5rem;
+    background-color: #fff;
+    @include main-shadow(lighten($txt-color-primary, 85%), 15px);  
+}
+
+//style de la description des plats et ellipsis
+.article__content {
+    flex-grow: 2;
+    flex-shrink: 4;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.94rem;
+
+    &--title{
+        font-size: $body-heighlight-font-size;
+        font-weight: $title-font-weight;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &--description{ 
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+//style et animation du slide
+.article__check {
+    display: flex;
+    flex-direction: row;
+
+    &--price{
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+        color: $bg-footer-color;
+        font-weight: $title-font-weight;
+        padding: 0.94rem;
+    }
+
+    &--slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.6875rem;
+        height: 100%;
+        background-color: $color-tertiary;
+        border-radius: 0 $main-border-radius $main-border-radius 0;
+        .fa-circle-check{
+            color: #fff;
+        }
+    }
+}

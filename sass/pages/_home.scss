@@ -1,0 +1,86 @@
+//style spécifique à la page home (index.html)
+
+//HERO-HEADER//
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-main-color;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+
+    &__title{
+        padding: 0 2rem;
+    }
+
+    &__description {
+        font-size: $body-heighlight-font-size;
+        font-weight: $body-font-weight;
+    }
+}
+
+//functioning//
+.functioning {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem 2.5rem 2.5rem ;
+    gap: 1.5rem;
+    text-align: start;
+    
+    &__steps{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &--item {
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 1.5rem;
+            gap: 1.5rem;
+            background-color: $bg-main-color;
+            font-weight: $body-heighlight-font-weight;
+            font-size: $bdoy-font-size;
+            border-radius: 1.25rem;
+            @include main-shadow(lighten($txt-color-primary, 85%), 15px); 
+            position: relative;
+        }
+    }
+}
+
+//number-step
+.step-number {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $txt-color-secondary;
+    text-align: center;
+    position: absolute;
+    left: -0.8rem;
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+//RESTAURANTS//
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem 3rem 1.5rem;
+    background-color: $bg-main-color;
+    gap: 2rem;
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+

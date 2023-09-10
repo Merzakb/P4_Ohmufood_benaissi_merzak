@@ -1,0 +1,45 @@
+
+//cette page contient le style du footer pour toutes les pages
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1.375rem 1.5625rem;
+    gap: 1rem;
+    background-color: $bg-footer-color;
+
+    &__logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-self: stretch;
+        &--title{
+            font-family: "Shrikhand";
+            font-size: $title-font-size;
+            font-weight: $body-heighlight-font-weight;
+            color: $txt-color-secondary;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        gap: 0.45rem;
+
+       &--item a{
+            display: flex;
+            flex-flow: row  nowrap;
+            gap: 0.8rem; //l'espace entre les icones et le texte à droite
+            font-size: $bdoy-font-size;
+            font-weight: $body-heighlight-font-weight;
+            color: #fff;
+            i{
+                width: $bdoy-font-size;
+                height: $bdoy-font-size;
+            }
+        }
+    }
+}

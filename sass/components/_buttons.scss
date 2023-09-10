@@ -1,0 +1,23 @@
+// style of the CTA buttons
+
+.cta {
+    border-radius: $btn-border-radius;
+    color: $txt-color-secondary;
+    @include main-shadow(lighten($txt-color-primary, 75%), 10px); 
+    height: 3.13rem;
+    border: none;
+    font-family: $body-font-familly;
+    font-size: $bdoy-font-size;
+    font-weight: $body-heighlight-font-weight;
+    padding:  0 1rem;
+    text-align: center;
+    @include bg-gradient($color-secondary, $color-primary);
+    flex-shrink: 0;
+}
+
+.restaurant__order {
+    display: flex;
+    align-self: center;
+    padding: 1rem 3rem 0.94rem 3.06rem;
+    margin-bottom: 2.5rem;
+}

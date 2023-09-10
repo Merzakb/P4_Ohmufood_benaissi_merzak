@@ -1,0 +1,27 @@
+//initialiser les marges et les padding de tous les éléments
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+img {
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: $txt-color-primary;
+}
+
+ul, ol {
+    list-style: none;
+}
