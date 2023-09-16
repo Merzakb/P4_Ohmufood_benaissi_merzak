@@ -7,3 +7,10 @@
 @mixin bg-gradient ($color1, $color2) {
     background-image: linear-gradient(to bottom, $color1, $color2);
 }
+
+//media queries
+@mixin breakpoint($point) {
+   @media screen and (min-width: $point ){
+        @content
+   }
+}

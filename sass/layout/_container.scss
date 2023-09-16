@@ -1,0 +1,11 @@
+//general style of container section
+.container {
+    @include breakpoint($medium-screen) {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+        max-width: 75rem; //1200px
+    }
+}
+

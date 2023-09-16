@@ -8,8 +8,12 @@
 
 body {
   height: 100%;
+  max-width: 90rem;
   background-color: #fff;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 img {
@@ -88,6 +92,11 @@ body {
   width: 100%;
   overflow: hidden;
 }
+@media screen and (min-width: 56.25rem) {
+  .card {
+    width: 43%;
+  }
+}
 
 .caption {
   display: flex;
@@ -151,6 +160,16 @@ body {
   color: #353535;
 }
 
+@media screen and (min-width: 56.25rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    max-width: 75rem;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -172,6 +191,11 @@ body {
   font-weight: 500;
   color: #fff;
 }
+@media screen and (min-width: 56.25rem) {
+  .footer__logo--title {
+    font-size: 1.125rem;
+  }
+}
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -189,6 +213,19 @@ body {
 .footer__links--item a i {
   width: 1rem;
   height: 1rem;
+}
+@media screen and (min-width: 56.25rem) {
+  .footer__links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 56.25rem) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 2.5rem;
+    padding: 1.88rem 2.5rem;
+  }
 }
 
 .hero-header {
@@ -221,6 +258,11 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
+@media screen and (min-width: 56.25rem) {
+  .functioning__steps {
+    flex-flow: row wrap;
+  }
+}
 .functioning__steps--item {
   display: flex;
   flex-flow: row nowrap;
@@ -232,6 +274,11 @@ body {
   border-radius: 1.25rem;
   box-shadow: 0px 4px 15px 0px #d9d9d9;
   position: relative;
+}
+@media screen and (min-width: 56.25rem) {
+  .functioning {
+    padding: 3.12rem 11.5rem;
+  }
 }
 
 .step-number {
@@ -265,6 +312,19 @@ body {
   align-content: center;
   align-items: center;
 }
+@media screen and (min-width: 56.25rem) {
+  .restaurants__cards {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0;
+    gap: 3.12rem;
+  }
+}
+@media screen and (min-width: 56.25rem) {
+  .restaurants {
+    padding: 1.88rem 11.5rem;
+  }
+}
 
 .resto-hero-header {
   display: flex;
@@ -296,10 +356,20 @@ body {
 .restaurant__title .fa-heart {
   margin: 0 1.5rem;
 }
+@media screen and (min-width: 56.25rem) {
+  .restaurant__title {
+    justify-content: center;
+  }
+}
 .restaurant__menu {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media screen and (min-width: 56.25rem) {
+  .restaurant__menu {
+    padding: 0 11.5rem;
+  }
 }
 
 .menu-cards {

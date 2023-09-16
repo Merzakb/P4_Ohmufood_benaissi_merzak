@@ -34,6 +34,10 @@
         flex-direction: column;
         gap: 1.5rem;
 
+        @include breakpoint($medium-screen){
+            flex-flow: row wrap;
+        }
+
         &--item {
             display: flex;
             flex-flow: row nowrap;
@@ -43,9 +47,13 @@
             font-weight: $body-heighlight-font-weight;
             font-size: $bdoy-font-size;
             border-radius: 1.25rem;
+            //shadow
             @include main-shadow(lighten($txt-color-primary, 85%), 15px); 
             position: relative;
         }
+    }
+    @include breakpoint($medium-screen){
+        padding: 3.12rem 11.5rem;
     }
 }
 
@@ -74,6 +82,7 @@
     padding: 2.5rem 1.5rem 3rem 1.5rem;
     background-color: $bg-main-color;
     gap: 2rem;
+
     &__cards{
         display: flex;
         flex-direction: column;
@@ -81,6 +90,16 @@
         justify-content: center;
         align-content: center;
         align-items: center;
+        @include breakpoint($medium-screen){
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding: 0;
+            gap: 3.12rem;
+        }
+    }
+    
+    @include breakpoint($medium-screen){
+        padding: 1.88rem 11.5rem;
     }
 }
 

@@ -31,12 +31,20 @@
         .fa-heart {
             margin: 0 1.5rem;
         }
+        
+        @include breakpoint($medium-screen){
+            justify-content: center;
+        }
     }
 
     &__menu {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+
+        @include breakpoint($medium-screen){
+            padding: 0 11.5rem;
+        }
     }
 }
 
