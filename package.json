@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "package.json": "^2.0.1",
+    "sass": "^1.67.0"
+  },
+  "name": "p4_ohmyfood_benaissi_merzak",
+  "description": "Ohmyfood, projet 4 de la fomation inégrateur web d'OpenClassrooms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch .\/sass\/main.scss .\/assets\/css\/style.css"
+  },
+  "author": "Merzak Benaissi",
+  "license": "ISC"
+}
