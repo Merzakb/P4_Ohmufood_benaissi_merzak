@@ -5,6 +5,7 @@
     background-color: #fff;
     width: 100%;
     &__figure{
+        position: relative;
         border-radius: $main-border-radius;
         display: flex;
         flex-direction: column;
@@ -51,3 +52,18 @@
     }
 }
 
+//span "nouveau"
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 1.8125rem;
+    position:absolute;
+    z-index: 9999;
+    top: 0.8rem;
+    right: 0.75rem;
+    background-color: $color-tertiary;
+    color: $color-tertiary-variant;
+    font-weight: $title-font-weight;
+}

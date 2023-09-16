@@ -80,6 +80,7 @@ body {
   width: 100%;
 }
 .card__figure {
+  position: relative;
   border-radius: 0.9375rem;
   display: flex;
   flex-direction: column;
@@ -123,6 +124,21 @@ body {
 }
 .caption__heart .fa-heart {
   font-size: 1.75rem;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 1.8125rem;
+  position: absolute;
+  z-index: 9999;
+  top: 0.8rem;
+  right: 0.75rem;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 700;
 }
 
 .header {
