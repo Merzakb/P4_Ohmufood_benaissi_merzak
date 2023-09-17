@@ -29,7 +29,10 @@
         text-align: start;
         justify-content: space-between;
         &--like{
-             margin: 0 1.5rem;
+            margin: 0 1.5rem;
+            .like__btn{
+                background-color: $bg-main-color;
+            }
         }
         
         @include breakpoint($medium-screen){
