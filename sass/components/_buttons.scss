@@ -21,3 +21,59 @@
     padding: 1rem 3rem 0.94rem 3.06rem;
     margin-bottom: 2.5rem;
 }
+
+///////////////////////////////
+//style of the Like buttons///
+/////////////////////////////
+.like {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-family: "Font Awesome 6 Free";
+    background-color: #000;
+
+    //on créer un pseudo-element qui prend la forme
+    //de son conteneur(div: like) et qui en-dessus des 
+    //2 bouttons coeur
+    &::before {
+        position: absolute;
+        content: "";
+        font-size: $title-highlight-font-size;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        @include bg-gradient($color-primary, $color-secondary);
+    }
+
+    &__btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        //lighten : Compare les composants RVB des pixels et conserve la couleur la plus claire.
+        mix-blend-mode: lighten;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        transition: opacity 350ms ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+        .like__btn-empty{
+            opacity: 0;
+        }
+    }
+}

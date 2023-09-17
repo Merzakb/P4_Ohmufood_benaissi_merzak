@@ -43,7 +43,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.restaurant__title {
+.restaurant__heading--title {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
@@ -70,6 +70,50 @@ body {
   align-self: center;
   padding: 1rem 3rem 0.94rem 3.06rem;
   margin-bottom: 2.5rem;
+}
+
+.like {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-family: "Font Awesome 6 Free";
+  background-color: #000;
+}
+.like::before {
+  position: absolute;
+  content: "";
+  font-size: 1.75rem;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+}
+.like__btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  mix-blend-mode: lighten;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 350ms ease-in-out;
+}
+.like:hover::before {
+  opacity: 1;
+}
+.like:hover .like__btn-empty {
+  opacity: 0;
 }
 
 .card {
@@ -116,14 +160,6 @@ body {
 .caption__txt--location {
   font-size: 1rem;
   font-weight: 300;
-}
-.caption__heart {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-.caption__heart .fa-heart {
-  font-size: 1.75rem;
 }
 
 .new {
@@ -363,17 +399,17 @@ body {
   background-color: #F6F6F6;
   padding: 2rem 0.81rem 0 0.81rem;
 }
-.restaurant__title {
+.restaurant__heading {
   display: flex;
   flex-flow: row nowrap;
   text-align: start;
   justify-content: space-between;
 }
-.restaurant__title .fa-heart {
+.restaurant__heading--like {
   margin: 0 1.5rem;
 }
 @media screen and (min-width: 56.25rem) {
-  .restaurant__title {
+  .restaurant__heading {
     justify-content: center;
   }
 }

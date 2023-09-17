@@ -23,13 +23,13 @@
     background-color: $bg-main-color;
     padding: 2rem 0.81rem 0 0.81rem;
 //le nom  du restaurant
-    &__title{
+    &__heading{
         display: flex;
         flex-flow: row nowrap;
         text-align: start;
         justify-content: space-between;
-        .fa-heart {
-            margin: 0 1.5rem;
+        &--like{
+             margin: 0 1.5rem;
         }
         
         @include breakpoint($medium-screen){

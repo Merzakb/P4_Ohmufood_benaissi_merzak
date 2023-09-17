@@ -42,14 +42,6 @@
         }
     }
 
-    &__heart{
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        .fa-heart{
-            font-size: $title-highlight-font-size;
-        }
-    }
 }
 
 //span "nouveau"
