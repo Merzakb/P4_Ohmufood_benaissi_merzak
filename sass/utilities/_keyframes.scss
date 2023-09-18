@@ -1,0 +1,14 @@
+//animaton bouttons
+
+$shake-intensity: 5%;
+
+ @keyframes button-headshake {
+    25% {
+        // entièrement en bas
+        transform: translateY($shake-intensity);
+    }
+    75% {
+         // entièrement en bas
+         transform: translateY($shake-intensity * -1);
+    }
+}

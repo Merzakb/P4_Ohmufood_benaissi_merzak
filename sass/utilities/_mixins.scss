@@ -12,5 +12,15 @@
 @mixin breakpoint($point) {
    @media screen and (min-width: $point ){
         @content
-   }
+   };
+}
+
+//pseudo-element
+@mixin pseudo-element {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

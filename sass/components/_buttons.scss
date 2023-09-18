@@ -3,18 +3,53 @@
 .cta {
     border-radius: $btn-border-radius;
     color: $txt-color-secondary;
-    @include main-shadow(lighten($txt-color-primary, 75%), 10px); 
+    @include bg-gradient($color-secondary, $color-primary);
+    @include main-shadow(lighten($txt-color-primary, 75%), 0.625rem); 
     height: 3.13rem;
     border: none;
-    font-family: $body-font-familly;
-    font-size: $bdoy-font-size;
-    font-weight: $body-heighlight-font-weight;
     padding:  0 1rem;
     text-align: center;
-    @include bg-gradient($color-secondary, $color-primary);
     flex-shrink: 0;
+    position: relative;
+
+    //on crée un pseudo-element qui va servir 
+    // comme un fond de couleur
+    &::after {
+        @include pseudo-element;
+        //background plus éclaircit
+        @include bg-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+        //pour ne pas cahcer le texte quand l'opacity sera de 1
+        mix-blend-mode: lighten;
+        border-radius: $btn-border-radius;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    //style et animation du texte dans les boutons
+    &__txt{
+        font-family: $body-font-familly;
+        font-size: $bdoy-font-size;
+        font-weight: $body-heighlight-font-weight;
+        display: flex;
+        transition: transform 300ms cubic-bezier(.4,.1,.6,.9);
+        transition-delay: 100ms;
+    }
+
+    &:hover{
+        //on élargis le shadow
+        @include main-shadow(lighten($txt-color-primary, 60%), 1.5rem);
+        &::after {
+            opacity: 1;
+        }
+        .cta__txt{
+            //on fait bouger le texte des boutons
+            transform: translateY($shake-intensity  * -1);
+        }
+        
+    }
 }
 
+// spécifique au boutton "commander"
 .restaurant__order {
     display: flex;
     align-self: center;
@@ -40,13 +75,10 @@
     //de son conteneur(div: like) et qui en-dessus des 
     //2 bouttons coeur
     &::before {
-        position: absolute;
-        content: "";
+       @include pseudo-element;
         font-size: $title-highlight-font-size;
         height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
         opacity: 0;
         @include bg-gradient($color-primary, $color-secondary);
     }

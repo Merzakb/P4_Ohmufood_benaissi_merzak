@@ -1,3 +1,11 @@
+@keyframes button-headshake {
+  25% {
+    transform: translateY(5%);
+  }
+  75% {
+    transform: translateY(-5%);
+  }
+}
 *,
 *::after,
 *::before {
@@ -53,16 +61,44 @@ body {
 .cta {
   border-radius: 1.65rem;
   color: #fff;
-  box-shadow: 0px 4px 10px 0px #bfbfbf;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  box-shadow: 0px 4px 0.625rem 0px #bfbfbf;
   height: 3.13rem;
   border: none;
+  padding: 0 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #ff93e1, #a16be0);
+  mix-blend-mode: lighten;
+  border-radius: 1.65rem;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.cta__txt {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0 1rem;
-  text-align: center;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  flex-shrink: 0;
+  display: flex;
+  transition: transform 300ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  transition-delay: 100ms;
+}
+.cta:hover {
+  box-shadow: 0px 4px 1.5rem 0px #999999;
+}
+.cta:hover::after {
+  opacity: 1;
+}
+.cta:hover .cta__txt {
+  transform: translateY(-5%);
 }
 
 .restaurant__order {
@@ -84,13 +120,15 @@ body {
   background-color: #000;
 }
 .like::before {
-  position: absolute;
   content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   font-size: 1.75rem;
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
   opacity: 0;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
 }
@@ -407,6 +445,9 @@ body {
 }
 .restaurant__heading--like {
   margin: 0 1.5rem;
+}
+.restaurant__heading--like .like__btn {
+  background-color: #F6F6F6;
 }
 @media screen and (min-width: 56.25rem) {
   .restaurant__heading {
