@@ -85,15 +85,12 @@
     @include main-shadow(lighten($txt-color-primary, 85%), 15px);  
 }
 
-//style de la description des plats et ellipsis
+//style de la description des plats
 .article__content {
     flex-grow: 2;
-    flex-shrink: 4;
     display: flex;
     flex-flow: column nowrap;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    width: 60%;
     padding: 0.94rem;
 
     &--title{
@@ -111,30 +108,80 @@
     }
 }
 
-//style et animation du slide
+///////////////////////////////
+//style et animation du slide//
+///////////////////////////////
+
+//Explication de l'animation:
+//d'abord on l'élement "price" et l'élement "slide"
+//occupe exactement la même surface, gràace à position: absolute.
+//on fait disparaitre "slide" avec scaleX(0).
+//à l'état :hover, on fait décaler " price" a gauche avec 
+//translateX(-3.6875rem) et on fait appraitre "slide" avec
+//scaleX(1), ce qui nous donne l'impression qu'à l'apparition
+//de "slide" il pousse l'élement "price" vers la gauche pour 
+//prendre sa place.
+
 .article__check {
     display: flex;
     flex-direction: row;
+    position: relative;
+    width: 3.6875rem;
 
     &--price{
         display: flex;
-        justify-self: flex-end;
-        align-self: flex-end;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        width: 100%;
+        height: 100%;
         color: $bg-footer-color;
         font-weight: $title-font-weight;
         padding: 0.94rem;
+        transform: translateX(0);
+        transition: transform 300ms linear 50ms;
     }
 
     &--slide{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 3.6875rem;
+        position: absolute;
+        width: 100%;
         height: 100%;
         background-color: $color-tertiary;
         border-radius: 0 $main-border-radius $main-border-radius 0;
+        transform-origin: right;
+        transform : scaleX(0);
+        transition: transform 350ms linear;
+    
         .fa-circle-check{
             color: #fff;
         }
     }
 }
+
+
+// toutes les animations à l'état :hover
+.article:hover {
+    .article__content{
+       //pour permettre à l'élement "content" de se rétricir
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    .article__content--title, .article__content--description{
+        flex-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .article__check--price{
+        transform: translateX(-3.6875rem);
+    }
+    
+    .article__check--slide{
+        transform :scaleX(1);
+    } 
+}
+
