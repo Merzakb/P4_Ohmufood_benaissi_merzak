@@ -14,6 +14,53 @@
     transform: scaleX(1);
   }
 }
+@keyframes glass-1 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-3.5rem) rotate(30deg);
+  }
+}
+@keyframes glass-2 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-5rem) rotate(-30deg);
+  }
+}
+@keyframes bulle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5rem) scale(3);
+    opacity: 1;
+  }
+}
+@keyframes letter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* pour faire disparaitre le loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 *,
 *::after,
 *::before {
@@ -162,6 +209,107 @@ body {
   opacity: 0;
 }
 
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #F6F6F6;
+  z-index: 100;
+  opacity: 1;
+  animation-name: loader;
+  animation-delay: 3.5s;
+  animation-fill-mode: both;
+}
+.loader .load {
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+}
+
+.bulle {
+  width: 5rem;
+  height: 5rem;
+  background: radial-gradient(circle, white, #54ffd5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: absolute;
+  left: 19rem;
+  top: 24rem;
+  transform-origin: bottom;
+  opacity: 0;
+  animation: bulle 1000ms linear 1000ms forwards;
+  transform: translateY(10rem);
+  perspective: 10rem;
+}
+.bulle__item {
+  font-size: 0.8rem;
+  color: #9356DC;
+  font-family: "Shrikhand", sans-serif;
+  opacity: 0;
+  animation: letter 1000ms linear forwards;
+}
+.bulle__item--1 {
+  animation-delay: 2100ms;
+}
+.bulle__item--2 {
+  animation-delay: 2200ms;
+}
+.bulle__item--3 {
+  animation-delay: 2300ms;
+}
+.bulle__item--4 {
+  animation-delay: 2400ms;
+}
+.bulle__item--5 {
+  animation-delay: 2500ms;
+}
+.bulle__item--6 {
+  animation-delay: 2600ms;
+}
+.bulle__item--7 {
+  animation-delay: 2700ms;
+}
+.bulle__item--8 {
+  animation-delay: 2800ms;
+}
+.bulle__item--9 {
+  animation-delay: 2900ms;
+}
+
+.glass {
+  display: flex;
+}
+.glass__item {
+  font-size: 10rem;
+  color: #353535;
+}
+.glass__item--1 {
+  cursor: pointer;
+  margin-right: 2rem;
+  transform-origin: top center;
+  animation: glass-1 900ms alternate 100ms forwards;
+}
+.glass__item--2 {
+  cursor: pointer;
+  transform-origin: bottom center;
+  animation: glass-2 900ms alternate 100ms forwards;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -215,7 +363,7 @@ body {
   width: 5rem;
   height: 1.8125rem;
   position: absolute;
-  z-index: 9999;
+  z-index: 2;
   top: 0.8rem;
   right: 0.75rem;
   background-color: #99E2D0;

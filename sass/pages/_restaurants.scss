@@ -126,8 +126,8 @@
 //style et animation du slide//
 
 //Explication de l'animation:
-//d'abord on l'élement "price" et l'élement "slide"
-//occupe exactement la même surface, gràace à position: absolute.
+//d'abord on a l'élement "price" et l'élement "slide"
+//occupe exactement la même surface, grâce à position: absolute.
 //on fait disparaitre "slide" avec scaleX(0).
 //à l'état :hover, on fait décaler " price" a gauche avec 
 //translateX(-3.6875rem) et on fait appraitre "slide" avec

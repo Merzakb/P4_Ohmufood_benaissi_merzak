@@ -1,0 +1,85 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: $bg-main-color;
+    z-index: 100;
+    opacity: 1;
+    animation-name: loader;
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+    .load {
+        width: 50rem;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+    }
+}
+
+
+.bulle {
+    width: 5rem;
+    height: 5rem;
+    background: radial-gradient(circle, lighten($color-tertiary, 40),
+    lighten($color-tertiary-variant, 40)); 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: absolute;
+    left: 19rem;
+    top: 24rem;
+    transform-origin: bottom;
+    opacity: 0;
+    animation: bulle 1000ms linear 1000ms forwards;
+    transform: translateY(10rem);
+    perspective: 10rem;
+    &__item {
+        font-size: 0.8rem;
+        color: $color-primary;
+        font-family: $title-font-familly;
+        opacity: 0;
+        animation: letter 1000ms linear forwards;
+        //créer un délai décalé
+        @for $i from 1 through 9 {
+            &--#{$i} {
+                animation-delay: 2000ms + 100ms * $i;
+            }
+        }
+    }
+}
+
+
+.glass {
+    display: flex;
+    &__item{
+        font-size: 10rem;
+        color:$bg-footer-color;
+        
+        &--1{
+            cursor: pointer;
+            margin-right: 2rem;
+            transform-origin: top center;
+            animation: glass-1 900ms alternate 100ms forwards;
+        }
+
+        &--2{
+            cursor: pointer;
+            transform-origin: bottom center;
+            animation: glass-2 900ms alternate 100ms forwards;
+        }
+    }
+}
+  
