@@ -1,6 +1,6 @@
-//style pour les pages restaurants
+//style pour les pages restaurants//
 
-//la photo sous le header
+//la photo sous le header//
 .resto-hero-header {
     display: flex;
     align-self: stretch;
@@ -10,7 +10,7 @@
     }
 }
 
-//le style général de la section restaurant
+//le style général de la section restaurant//
 .restaurant {
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     gap: 2.5rem;
     margin-top: -3rem;//pour faire monter 
     position: relative;//la card en haut et 
-    z-index: 1000;// se sperposer sur la photo
+    z-index: 1000;// se superposer sur la photo
     border-radius: 2.5rem 2.5rem 0 0;
     background-color: $bg-main-color;
     padding: 2rem 0.81rem 0 0.81rem;
@@ -52,7 +52,7 @@
 }
 
 
-//style globla des cards (entrées, plats, desserts)
+//style globla des cards (entrées, plats, desserts)//
 .menu-cards {
     display: flex;
     flex-direction: column;
@@ -71,10 +71,10 @@
             height: 0.1875rem;
             background: $color-tertiary;
         }
-    }
+    }  
 }
 
-//style de chaque article en particulier
+//style de chaque article en particulier//
 .article {
     display: flex;
     flex-direction: row;
@@ -85,7 +85,22 @@
     @include main-shadow(lighten($txt-color-primary, 85%), 15px);  
 }
 
-//style de la description des plats
+//animation de l'apparition des articles du menu//
+.menu-anim {
+    transform: scaleX(0);
+    transform-origin: top left;
+    animation: menu-item $anim-dur ease-in-out forwards;
+
+    //pour créer un déclage entre l'apparition d'un artcile
+    //et le le précédent
+    @for $i from 0 through 13 {
+        &--#{$i} {
+            animation-delay: $anim-dur * $i;
+        }
+    }
+}
+
+//style de la description des plats//
 .article__content {
     flex-grow: 2;
     display: flex;
@@ -108,9 +123,7 @@
     }
 }
 
-///////////////////////////////
 //style et animation du slide//
-///////////////////////////////
 
 //Explication de l'animation:
 //d'abord on l'élement "price" et l'élement "slide"
@@ -154,7 +167,6 @@
         transform-origin: right;
         transform : scaleX(0);
         transition: transform 350ms linear;
-    
         .fa-circle-check{
             color: #fff;
         }
@@ -177,6 +189,7 @@
     }
 
     .article__check--price{
+        //pour faire pousser l'élement price vers la gauche
         transform: translateX(-3.6875rem);
     }
     

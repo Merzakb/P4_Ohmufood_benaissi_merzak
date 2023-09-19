@@ -1,9 +1,17 @@
 @keyframes button-headshake {
   25% {
-    transform: translateY(5%);
+    transform: translateY(7%);
   }
   75% {
-    transform: translateY(-5%);
+    transform: translateY(-7%);
+  }
+}
+@keyframes menu-item {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 *,
@@ -92,13 +100,13 @@ body {
   transition-delay: 100ms;
 }
 .cta:hover {
-  box-shadow: 0px 4px 1.5rem 0px #999999;
+  box-shadow: 0px 4px 1.5rem 0px #a16be0;
 }
 .cta:hover::after {
   opacity: 1;
 }
 .cta:hover .cta__txt {
-  transform: translateY(-5%);
+  transform: translateY(-7%);
 }
 
 .restaurant__order {
@@ -494,6 +502,54 @@ body {
   height: 4.5rem;
   background-color: #fff;
   box-shadow: 0px 4px 15px 0px #d9d9d9;
+}
+
+.menu-anim {
+  transform: scaleX(0);
+  transform-origin: top left;
+  animation: menu-item 300ms ease-in-out forwards;
+}
+.menu-anim--0 {
+  animation-delay: 0ms;
+}
+.menu-anim--1 {
+  animation-delay: 300ms;
+}
+.menu-anim--2 {
+  animation-delay: 600ms;
+}
+.menu-anim--3 {
+  animation-delay: 900ms;
+}
+.menu-anim--4 {
+  animation-delay: 1200ms;
+}
+.menu-anim--5 {
+  animation-delay: 1500ms;
+}
+.menu-anim--6 {
+  animation-delay: 1800ms;
+}
+.menu-anim--7 {
+  animation-delay: 2100ms;
+}
+.menu-anim--8 {
+  animation-delay: 2400ms;
+}
+.menu-anim--9 {
+  animation-delay: 2700ms;
+}
+.menu-anim--10 {
+  animation-delay: 3000ms;
+}
+.menu-anim--11 {
+  animation-delay: 3300ms;
+}
+.menu-anim--12 {
+  animation-delay: 3600ms;
+}
+.menu-anim--13 {
+  animation-delay: 3900ms;
 }
 
 .article__content {

@@ -1,6 +1,6 @@
-//animaton bouttons
+//animation des bouttons cta
 
-$shake-intensity: 5%;
+$shake-intensity:7%;
 
  @keyframes button-headshake {
     25% {
@@ -10,5 +10,16 @@ $shake-intensity: 5%;
     75% {
          // entièrement en bas
          transform: translateY($shake-intensity * -1);
+    }
+}
+
+//animation de l'apparition des articles du menu
+@keyframes menu-item {
+    0%{
+        transform: scaleX(0);
+    }
+
+    100%{
+        transform: scaleX(1);
     }
 }
