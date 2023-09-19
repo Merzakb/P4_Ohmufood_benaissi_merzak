@@ -26,7 +26,7 @@
     }
 
     //style et animation du texte dans les boutons
-    &__txt{
+    &__txt {
         font-family: $body-font-familly;
         font-size: $bdoy-font-size;
         font-weight: $body-heighlight-font-weight;
@@ -35,9 +35,9 @@
         transition-delay: 100ms;
     }
 
-    &:hover{
+    &:hover {
         //on élargis le shadow
-        @include main-shadow(lighten($txt-color-primary, 60%), 1.5rem);
+        @include main-shadow(lighten($color-primary, 5), 1.5rem);
         &::after {
             opacity: 1;
         }
