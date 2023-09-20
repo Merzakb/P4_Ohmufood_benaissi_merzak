@@ -57,9 +57,7 @@
     transform: translateY(10rem);
     &__item {
         font-size: 0.8rem;
-        background: -webkit-linear-gradient($color-primary, $color-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $color-primary;
         font-family: $title-font-familly;
         opacity: 0;
         animation: letter 1000ms linear forwards;
