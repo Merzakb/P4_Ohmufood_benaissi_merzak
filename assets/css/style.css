@@ -32,11 +32,11 @@
 }
 @keyframes bulle {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(10);
     opacity: 1;
   }
   100% {
-    transform: translateY(-5rem) scale(3);
+    transform: translateY(5rem) scale(2.5);
     opacity: 1;
   }
 }
@@ -59,6 +59,14 @@
   100% {
     opacity: 0;
     z-index: -10;
+  }
+}
+@keyframes cercle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 *,
@@ -229,13 +237,25 @@ body {
   animation-fill-mode: both;
 }
 .loader .load {
-  width: 50rem;
-  height: 50rem;
+  width: 40rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
+  padding-left: 7rem;
+}
+.loader .load::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 0.5rem dashed #353535;
+  animation: cercle 60s linear;
 }
 
 .bulle {
@@ -248,17 +268,18 @@ body {
   align-items: center;
   font-size: 1rem;
   position: absolute;
-  left: 19rem;
-  top: 24rem;
+  left: 18rem;
+  top: 10rem;
   transform-origin: bottom;
   opacity: 0;
   animation: bulle 1000ms linear 1000ms forwards;
   transform: translateY(10rem);
-  perspective: 10rem;
 }
 .bulle__item {
   font-size: 0.8rem;
-  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Shrikhand", sans-serif;
   opacity: 0;
   animation: letter 1000ms linear forwards;

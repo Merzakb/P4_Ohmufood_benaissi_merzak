@@ -16,14 +16,24 @@
     animation-name: loader;
     animation-delay: 3.5s;
     animation-fill-mode: both;
+    
     .load {
-        width: 50rem;
-        height: 50rem;
+        width: 40rem;
+        height: 40rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         position: relative;
+        padding-left: 7rem;
+
+        &::after {
+            @include pseudo-element;
+            border-radius: 50%;
+            border: 0.5rem dashed $bg-footer-color;
+            animation: cercle 60s linear;
+
+        }
     }
 }
 
@@ -39,16 +49,17 @@
     align-items: center;
     font-size: 1rem;
     position: absolute;
-    left: 19rem;
-    top: 24rem;
+    left: 18rem;
+    top: 10rem;
     transform-origin: bottom;
     opacity: 0;
     animation: bulle 1000ms linear 1000ms forwards;
     transform: translateY(10rem);
-    perspective: 10rem;
     &__item {
         font-size: 0.8rem;
-        color: $color-primary;
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-family: $title-font-familly;
         opacity: 0;
         animation: letter 1000ms linear forwards;
