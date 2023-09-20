@@ -18,14 +18,21 @@
     animation-fill-mode: both;
     
     .load {
-        width: 40rem;
-        height: 40rem;
+
+        width: 20rem;
+        height: 20rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
         position: relative;
-        padding-left: 7rem;
+        padding-left: 3rem;
+
+        @include breakpoint($medium-screen) {
+            width: 40rem;
+            height: 40rem;
+            padding-left: 7rem;
+        }
 
         &::after {
             @include pseudo-element;
@@ -39,24 +46,32 @@
 
 
 .bulle {
-    width: 5rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     background: radial-gradient(circle, lighten($color-tertiary, 40),
     lighten($color-tertiary-variant, 40)); 
     border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
     position: absolute;
-    left: 18rem;
-    top: 10rem;
+    left: 9rem;
+    top: -1rem;
     transform-origin: bottom;
     opacity: 0;
     animation: bulle 1000ms linear 1000ms forwards;
     transform: translateY(10rem);
+
+    @include breakpoint($medium-screen) {
+        width: 5rem;
+        height: 5rem;
+        left: 18rem;
+        top: 10rem;
+        transform: translateY(10rem);
+    }
+
     &__item {
-        font-size: 0.8rem;
+        font-size: 0.2rem;
         color: $color-primary;
         font-family: $title-font-familly;
         opacity: 0;
@@ -67,6 +82,10 @@
                 animation-delay: 2000ms + 100ms * $i;
             }
         }
+
+        @include breakpoint($medium-screen) {
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -74,21 +93,29 @@
 .glass {
     display: flex;
     &__item{
-        font-size: 10rem;
+        font-size: 4rem;
         color:$bg-footer-color;
         
         &--1{
-            cursor: pointer;
-            margin-right: 2rem;
+            margin-right: 0.5rem;
             transform-origin: top center;
-            animation: glass-1 900ms alternate 100ms forwards;
+            animation: glass-1-mobile 900ms alternate 100ms forwards;
+
+            @include breakpoint($medium-screen) {
+                margin-right: 2rem;
+                animation: glass-1 900ms alternate 100ms forwards;
+            }
         }
 
         &--2{
-            cursor: pointer;
             transform-origin: bottom center;
             animation: glass-2 900ms alternate 100ms forwards;
         }
+        @include breakpoint($medium-screen) {
+            font-size: 10rem;
+        }
     }
+
+    
 }
   

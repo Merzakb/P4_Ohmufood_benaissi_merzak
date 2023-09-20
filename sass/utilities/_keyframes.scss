@@ -39,6 +39,17 @@ $shake-intensity:7%;
     }
 }
 
+//glass 1
+@keyframes glass-1-mobile {
+    0%{transform: translateY(0) rotate(0);
+        
+    }
+
+    100%{
+        transform: translateY(-4rem) rotate(30deg);
+    }
+}
+
 //glass 2
 @keyframes glass-2 {
     0%{
