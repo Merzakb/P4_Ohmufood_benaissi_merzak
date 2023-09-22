@@ -16,9 +16,9 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="header__logo">
-                ohmyfood
-            </h1>
+            <div class="header__logo">
+                <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood écrit en lettres ltines">
+            </div>
             <div class="header__back">
                 <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
@@ -27,16 +27,16 @@
             <div class="resto-hero-header">
                 <img src="../assets/images/restaurants/la-palette-du-gout.jpg" alt="image montrant un plat dans une assiète ronde sur une table dans un restaurant">
             </div>
-            <section class="restaurant">
-                <div class="restaurant__heading">
-                    <h2 class="restaurant__heading--title">La palette du goût</h2>
-                    <div class="restaurant__heading--like like">
+            <div class="restaurant">
+                <h1 class="restaurant__heading">
+                    <span class="restaurant__heading--title">La palette du goût</span>
+                    <span class="restaurant__heading--like like">
                         <i class="fa-regular fa-heart like__btn like__btn-empty"></i>
                         <i class="fa-solid fa-heart like__btn like__btn-full"></i>
-                    </div>
-                </div>
+                    </span>
+                </h1>
                 <div class="restaurant__menu">
-                    <div class="menu-cards starters">
+                    <section class="menu-cards starters">
                         <h2 class="menu-cards__title menu-anim menu-anim--1">Entrées</h2>
                         <article class="article menu-anim menu-anim--2 ">
                             <div class="article__content">
@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                         </article>
-                    </div>
-                    <div class="menu-cards dishes">
+                    </section>
+                    <section class="menu-cards dishes">
                         <h2 class="menu-cards__title menu-anim menu-anim--5 ">Plats</h2>
                         <article class="article menu-anim menu-anim--6">
                             <div class="article__content">
@@ -113,8 +113,8 @@
                                 </div>
                             </div>
                         </article>
-                    </div>
-                    <div class="menu-cards desserts">
+                    </section>
+                    <section class="menu-cards desserts">
                         <h2 class="menu-cards__title menu-anim menu-anim--9">Desserts</h2>
                         <article class="article menu-anim menu-anim--10">
                             <div class="article__content">
@@ -152,10 +152,10 @@
                                 </div>
                             </div>
                         </article>
-                    </div>
+                    </section>
                 </div>
                 <button class="restaurant__order cta"><span class="cta__txt">Commander</span></button>
-            </section>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__logo">
