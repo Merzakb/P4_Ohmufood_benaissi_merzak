@@ -4,6 +4,7 @@
     border-radius: $main-border-radius;
     background-color: #fff;
     width: 100%;
+    position: relative;
     &__figure{
         position: relative;
         border-radius: $main-border-radius;
@@ -17,6 +18,13 @@
             width: 100%;
             overflow: hidden;
         }
+    }
+    
+    &__favorite{
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        
     }
 
     @include medium-screen{
