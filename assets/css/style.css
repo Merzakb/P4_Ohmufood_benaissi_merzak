@@ -14,6 +14,14 @@
     transform: scaleX(1);
   }
 }
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes glass-1 {
   0% {
     transform: translateY(0) rotate(0);
@@ -860,6 +868,7 @@ body {
 }
 .article__check--slide .fa-circle-check {
   color: #fff;
+  opacity: 0;
 }
 
 .article:hover .article__content {
@@ -876,6 +885,9 @@ body {
 }
 .article:hover .article__check--slide {
   transform: scaleX(1);
+}
+.article:hover .fa-circle-check {
+  animation: check 200ms linear 150ms forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

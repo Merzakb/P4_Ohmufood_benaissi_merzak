@@ -177,6 +177,7 @@
         transition: transform 350ms linear;
         .fa-circle-check{
             color: #fff;
+            opacity: 0;
         }
     }
 }
@@ -204,5 +205,9 @@
     .article__check--slide{
         transform :scaleX(1);
     } 
+
+    .fa-circle-check {
+        animation: check 200ms linear 150ms forwards;
+    }
 }
 

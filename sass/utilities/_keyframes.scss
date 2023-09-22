@@ -2,7 +2,7 @@
 
 $shake-intensity:7%;
 
- @keyframes button-headshake {
+@keyframes button-headshake {
     25% {
         // entièrement en bas
         transform: translateY($shake-intensity);
@@ -24,6 +24,18 @@ $shake-intensity:7%;
     }
 }
 
+
+//slide check
+
+@keyframes check {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
 
 ////////////////////
 //loader///
