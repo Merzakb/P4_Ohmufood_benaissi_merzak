@@ -8,12 +8,28 @@
     background-image: linear-gradient(to bottom, $color1, $color2);
 }
 
-//media queries
-@mixin breakpoint($point) {
-   @media screen and (min-width: $point ){
-        @content
-   };
-}
+////////////////////////
+   //media queries//
+///////////////////////
+$breakpoints: (
+    small: 48rem, //768px
+    medium: 64rem, //1024px
+);
+
+//large screen
+@mixin large-screen {
+    @media screen and (min-width: map-get($breakpoints, medium)){
+        @content;
+    }
+};
+
+ //medium screen
+@mixin medium-screen {
+    @media screen and (min-width: map-get($breakpoints, small)) and (max-width: map-get($breakpoints, medium)){
+        @content;
+    }
+};
+
 
 //pseudo-element
 @mixin pseudo-element {

@@ -93,6 +93,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: center;
+  margin: 0 auto;
 }
 
 img {
@@ -254,7 +255,7 @@ body {
   position: relative;
   padding-left: 3rem;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .loader .load {
     width: 40rem;
     height: 40rem;
@@ -287,19 +288,17 @@ body {
   transform-origin: bottom;
   opacity: 0;
   animation: bulle 1000ms linear 1000ms forwards;
-  transform: translateY(10rem);
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .bulle {
     width: 5rem;
     height: 5rem;
     left: 18rem;
     top: 10rem;
-    transform: translateY(10rem);
   }
 }
 .bulle__item {
-  font-size: 0.2rem;
+  font-size: 0.3rem;
   color: #9356DC;
   font-family: "Shrikhand", sans-serif;
   opacity: 0;
@@ -332,7 +331,7 @@ body {
 .bulle__item--9 {
   animation-delay: 2900ms;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .bulle__item {
     font-size: 0.8rem;
   }
@@ -350,7 +349,7 @@ body {
   transform-origin: top center;
   animation: glass-1-mobile 900ms alternate 100ms forwards;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .glass__item--1 {
     margin-right: 2rem;
     animation: glass-1 900ms alternate 100ms forwards;
@@ -360,7 +359,7 @@ body {
   transform-origin: bottom center;
   animation: glass-2 900ms alternate 100ms forwards;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .glass__item {
     font-size: 10rem;
   }
@@ -387,7 +386,12 @@ body {
   width: 100%;
   overflow: hidden;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 64rem) {
   .card {
     width: 43%;
   }
@@ -462,14 +466,12 @@ body {
   color: #353535;
 }
 
-@media screen and (min-width: 56.25rem) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 100%;
-    max-width: 75rem;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer {
@@ -493,7 +495,12 @@ body {
   font-weight: 500;
   color: #fff;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
+  .footer__logo--title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
   .footer__logo--title {
     font-size: 1.125rem;
   }
@@ -516,13 +523,26 @@ body {
   width: 1rem;
   height: 1rem;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .footer__links {
     flex-direction: row;
     gap: 1.5rem;
   }
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .footer__links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 2.5rem;
+    padding: 1.88rem 2.5rem;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
   .footer {
     flex-direction: row-reverse;
     gap: 2.5rem;
@@ -559,28 +579,35 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .functioning__steps {
+    flex-flow: row wrap;
+  }
+}
+@media screen and (min-width: 64rem) {
   .functioning__steps {
     flex-flow: row wrap;
   }
 }
 .functioning__steps--item {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   padding: 1.5rem;
   gap: 1.5rem;
   background-color: #F6F6F6;
   font-weight: 500;
   font-size: 1rem;
   border-radius: 1.25rem;
+  flex-grow: 1;
   box-shadow: 0px 4px 15px 0px #d9d9d9;
   position: relative;
 }
 .functioning__steps--item:hover .icon {
   color: #9356DC;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
   .functioning {
     padding: 3.12rem 11.5rem;
   }
@@ -605,7 +632,7 @@ body {
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 1.5rem 3rem 1.5rem;
+  padding: 2.5rem 1.5rem 3rem 2.5rem;
   background-color: #F6F6F6;
   gap: 2rem;
 }
@@ -617,7 +644,7 @@ body {
   align-content: center;
   align-items: center;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
   .restaurants__cards {
     flex-flow: row wrap;
     justify-content: space-between;
@@ -625,7 +652,20 @@ body {
     gap: 3.12rem;
   }
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 64rem) {
+  .restaurants__cards {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0;
+    gap: 3.12rem;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .restaurants {
+    padding: 2.5rem;
+  }
+}
+@media screen and (min-width: 64rem) {
   .restaurants {
     padding: 1.88rem 11.5rem;
   }
@@ -664,7 +704,12 @@ body {
 .restaurant__heading--like .like__btn {
   background-color: #F6F6F6;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .restaurant__heading {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 64rem) {
   .restaurant__heading {
     justify-content: center;
   }
@@ -674,7 +719,12 @@ body {
   flex-direction: column;
   gap: 2.5rem;
 }
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
+  .restaurant__menu {
+    padding: 0 8rem;
+  }
+}
+@media screen and (min-width: 64rem) {
   .restaurant__menu {
     padding: 0 11.5rem;
   }

@@ -19,7 +19,11 @@
         }
     }
 
-    @include breakpoint($medium-screen){
+    @include medium-screen{
+        width: 45%;
+    }
+
+    @include large-screen{
         width: 43%;
     }
 }

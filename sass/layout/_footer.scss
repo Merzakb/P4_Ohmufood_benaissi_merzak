@@ -21,7 +21,10 @@
             font-weight: $body-heighlight-font-weight;
             color: $txt-color-secondary;
 
-            @include breakpoint($medium-screen){
+            @include large-screen{
+                font-size: $body-heighlight-font-size;
+            }
+            @include medium-screen{
                 font-size: $body-heighlight-font-size;
             }
         }
@@ -45,13 +48,24 @@
                 height: $bdoy-font-size;
             }
         }
-        @include breakpoint($medium-screen){
+
+        @include large-screen{
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+        @include medium-screen{
             flex-direction: row;
             gap: 1.5rem;
         }
     }
 
-    @include breakpoint($medium-screen){
+    @include large-screen{
+        flex-direction: row-reverse;
+        gap: 2.5rem;
+        padding: 1.88rem 2.5rem;
+    }
+    
+    @include medium-screen{
         flex-direction: row-reverse;
         gap: 2.5rem;
         padding: 1.88rem 2.5rem;
