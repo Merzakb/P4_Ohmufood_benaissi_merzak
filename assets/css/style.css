@@ -857,6 +857,7 @@ body {
   border-radius: 0 0.9375rem 0.9375rem 0;
   transform-origin: right;
   transform: scaleX(0);
+  opacity: 0;
   transition: transform 350ms linear;
 }
 .article__check--slide .fa-circle-check {
@@ -878,6 +879,7 @@ body {
 }
 .article:hover .article__check--slide {
   transform: scaleX(1);
+  opacity: 1;
 }
 .article:hover .fa-circle-check {
   animation: check 200ms linear 150ms forwards;
