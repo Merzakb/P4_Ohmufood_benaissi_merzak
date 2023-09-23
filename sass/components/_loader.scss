@@ -37,7 +37,7 @@
         &::after {
             @include pseudo-element;
             border-radius: 50%;
-            border: 0.5rem dashed $bg-footer-color;
+            border: 0.5rem dotted $color-tertiary-variant;
             animation: cercle 60s linear;
 
         }
@@ -48,8 +48,7 @@
 .bulle {
     width: 2rem;
     height: 2rem;
-    background: radial-gradient(circle, lighten($color-tertiary, 40),
-    lighten($color-tertiary-variant, 40)); 
+    background: radial-gradient(circle, lighten($color-secondary, 5), lighten($color-primary, 5)); 
     border-radius: 50%; 
     display: flex;
     justify-content: center;
@@ -69,7 +68,7 @@
 
     &__item {
         font-size: 0.3rem;
-        color: $color-primary;
+        color: #fff;
         font-family: $title-font-familly;
         opacity: 0;
         animation: letter 1000ms linear forwards;
@@ -91,7 +90,11 @@
     display: flex;
     &__item{
         font-size: 4rem;
-        color:$bg-footer-color;
+        //color:$bg-footer-color;
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         
         &--1{
             margin-right: 0.5rem;
