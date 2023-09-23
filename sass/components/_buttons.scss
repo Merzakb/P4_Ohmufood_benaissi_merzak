@@ -83,17 +83,17 @@
     }
 
     &__btn-full{
+        //pur avoir la couleur du coeur en dégradé
         background: -webkit-linear-gradient($color-primary, $color-secondary);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
-        transition: opacity 350ms ease-in-out;
+        transition: opacity $anim-dur ease-in-out;
     }
 
     &:hover:hover {
         .like__btn-full {
-            //animation: like 3500ms ease-in-out forwards;
             opacity: 1;
         }
     }

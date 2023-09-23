@@ -10,7 +10,7 @@
     }
 }
 
-//le style général de la section restaurant//
+//le style général de l'élement restaurant//
 .restaurant {
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
         
         //la ligne verte sous les titres 
         &::after{
-            content: '';
+            content: "";
             display: block;
             width: 2.5rem;
             height: 0.1875rem;
@@ -96,11 +96,9 @@
 //animation de l'apparition des articles du menu//
 .menu-anim {
     transform: scaleX(0);
-    transform-origin: top left;
-    animation: menu-item $anim-dur ease-in-out forwards;
-
-    //pour créer un déclage entre l'apparition d'un artcile
-    //et le le précédent
+    transform-origin: left;
+    animation: menu-appearance $anim-dur ease-out both;
+    //créer un décalage du délai entre les items
     @for $i from 0 through 13 {
         &--#{$i} {
             animation-delay: $anim-dur * $i;
@@ -174,8 +172,11 @@
         border-radius: 0 $main-border-radius $main-border-radius 0;
         transform-origin: right;
         transform : scaleX(0);
+        transition: transform $anim-dur linear;
+        //pour faire cacher l'élement slide au début de 
+        //l'apparition des menus
         opacity: 0;
-        transition: transform 350ms linear;
+        animation: menu-content 50ms $anim-dur both;
         .fa-circle-check{
             color: #fff;
             opacity: 0;
@@ -205,7 +206,6 @@
     
     .article__check--slide{
         transform :scaleX(1);
-        opacity: 1;
     } 
 
     .fa-circle-check {

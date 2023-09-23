@@ -14,19 +14,29 @@ $shake-intensity:7%;
 }
 
 //animation de l'apparition des articles du menu
-@keyframes menu-item {
+@keyframes menu-appearance {
     0%{
         transform: scaleX(0);
     }
-
     100%{
         transform: scaleX(1);
     }
 }
 
+//cacher le
+@keyframes menu-content {
+    0%{
+        opacity: 0;
+    }
+   
+    100%{
+        opacity: 1;
+    }
+}
 
-//slide check
+//
 
+//slide check cercle
 @keyframes check {
     0%{
         opacity: 0;
@@ -51,7 +61,7 @@ $shake-intensity:7%;
     }
 }
 
-//glass 1
+//glass 1 mobile
 @keyframes glass-1-mobile {
     0%{transform: translateY(0) rotate(0);
         
@@ -105,7 +115,7 @@ $shake-intensity:7%;
 }
 
 
-/* pour faire disparaitre le loader*/
+//pour faire disparaitre le loader
 @keyframes loader{
     0%{
       opacity: 1;
