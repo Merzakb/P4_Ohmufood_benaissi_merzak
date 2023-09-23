@@ -177,7 +177,7 @@
         //pour faire cacher l'élement slide au début de 
         //l'apparition des menus
         opacity: 0;
-        animation: menu-content 50ms $anim-dur both;
+        animation: menu-content 50ms $anim-dur forwards;
         .fa-circle-check{
             color: #fff;
             opacity: 0;

@@ -873,7 +873,7 @@ body {
   transform: scaleX(0);
   transition: transform 350ms linear;
   opacity: 0;
-  animation: menu-content 50ms 350ms both;
+  animation: menu-content 50ms 350ms forwards;
 }
 .article__check--slide .fa-circle-check {
   color: #fff;
