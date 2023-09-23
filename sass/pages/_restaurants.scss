@@ -15,10 +15,11 @@
     display: flex;
     flex-direction: column;
     align-self: stretch;
+    max-width: 65rem;
     gap: 2.5rem;
-    margin-top: -3rem;//pour faire monter 
-    position: relative;//la card en haut et 
-    z-index: 1000;// se superposer sur la photo
+    margin: -3rem auto 0;//pour faire monter la card en haut et 
+    position: relative;
+    z-index: 99;// se superposer sur la photo
     border-radius: 2.5rem 2.5rem 0 0;
     background-color: $bg-main-color;
     padding: 2rem 0.81rem 0 0.81rem;

@@ -695,10 +695,11 @@ body {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  max-width: 65rem;
   gap: 2.5rem;
-  margin-top: -3rem;
+  margin: -3rem auto 0;
   position: relative;
-  z-index: 1000;
+  z-index: 99;
   border-radius: 2.5rem 2.5rem 0 0;
   background-color: #F6F6F6;
   padding: 2rem 0.81rem 0 0.81rem;
