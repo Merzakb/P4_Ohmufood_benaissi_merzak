@@ -53,6 +53,7 @@
             font-size: $bdoy-font-size;
             border-radius: 1.25rem;
             flex-grow: 1;
+            flex-shrink: 1;
             //shadow
             @include main-shadow(lighten($txt-color-primary, 85%), 15px); 
             position: relative;
