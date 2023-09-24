@@ -16,25 +16,14 @@ $shake-intensity:7%;
 //animation de l'apparition des articles du menu
 @keyframes menu-appearance {
     0%{
-        transform: scaleX(0);
-    }
-    100%{
-        transform: scaleX(1);
-    }
-}
-
-//cacher le slide au début de l'apparition des articles
-@keyframes menu-content {
-    0%{
         opacity: 0;
+        transform: scale(0);
     }
-   
     100%{
         opacity: 1;
+        transform: scale(1);
     }
 }
-
-//
 
 //slide check cercle
 @keyframes check {

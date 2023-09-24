@@ -8,18 +8,12 @@
 }
 @keyframes menu-appearance {
   0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes menu-content {
-  0% {
     opacity: 0;
+    transform: scale(0);
   }
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes check {
@@ -774,9 +768,10 @@ body {
 }
 
 .menu-anim {
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: menu-appearance 350ms ease-out both;
+  opacity: 0;
+  transform: scale(0.2);
+  transform-origin: top left;
+  animation: menu-appearance 350ms ease-out forwards;
 }
 .menu-anim--0 {
   animation-delay: 0ms;
@@ -872,8 +867,6 @@ body {
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 350ms linear;
-  opacity: 0;
-  animation: menu-content 50ms 350ms forwards;
 }
 .article__check--slide .fa-circle-check {
   color: #fff;

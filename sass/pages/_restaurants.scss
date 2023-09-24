@@ -96,9 +96,10 @@
 
 //animation de l'apparition des articles du menu//
 .menu-anim {
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: menu-appearance $anim-dur ease-out both;
+    opacity: 0;
+    transform: scale(0.2);
+    transform-origin: top left;
+    animation: menu-appearance $anim-dur ease-out forwards;
     //créer un décalage du délai entre les items
     @for $i from 0 through 13 {
         &--#{$i} {
@@ -174,17 +175,12 @@
         transform-origin: right;
         transform : scaleX(0);
         transition: transform $anim-dur linear;
-        //pour faire cacher l'élement slide au début de 
-        //l'apparition des menus
-        opacity: 0;
-        animation: menu-content 50ms $anim-dur forwards;
         .fa-circle-check{
             color: #fff;
             opacity: 0;
         }
     }
 }
-
 
 // toutes les animations à l'état :hover
 .article:hover {
@@ -206,7 +202,7 @@
     }
     
     .article__check--slide{
-        transform :scaleX(1);
+        transform : scaleX(1);
     } 
 
     .fa-circle-check {
