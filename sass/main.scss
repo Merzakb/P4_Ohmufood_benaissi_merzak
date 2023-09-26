@@ -13,13 +13,13 @@
 @import "./utilities/mixins";
 @import "./utilities/keyframes";
 
-@import "./base/base";
-@import "./base/typography";
+@import "./base/base"; //régles générales
+@import "./base/typography";// typographie du body et des titles
 
-@import "./components/buttons";
-@import "./components/loader";
-@import "./components/card";
-@import "./components/article";
+@import "./components/buttons"; //boutons cta & like
+@import "./components/loader"; //loader
+@import "./components/card";//cards restaurants de la page d'acceuil
+@import "./components/article";// animations des article du menu
 
 @import "./layout/header";
 @import "./layout/container";

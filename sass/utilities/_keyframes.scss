@@ -1,3 +1,5 @@
+//dans ce fichier on regroupe tous nos keyframes
+
 //animation des bouttons cta
 
 $shake-intensity:7%;
@@ -71,8 +73,8 @@ $shake-intensity:7%;
         transform: translateY(-5rem) rotate(-30deg);
     }
 }
-//bulle
-@keyframes bulle {
+//animation de la bulle
+@keyframes bubble {
     0%{
         transform: translateY(10rem);
         opacity: 1;
@@ -116,7 +118,7 @@ $shake-intensity:7%;
 }
 
 
-//cercle
+//cercle: pour faire oturner le cercle autour du loader
 @keyframes cercle {
     0%{
         transform: rotate(0deg);

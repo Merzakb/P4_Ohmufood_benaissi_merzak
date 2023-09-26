@@ -1,3 +1,5 @@
+// dans ce fichier on regroupe toutes nos mixin
+
 //shadow
 @mixin main-shadow ($color: $color-shadow, $size: $size-shadow) {
     box-shadow: 0px 4px $size 0px $color;
