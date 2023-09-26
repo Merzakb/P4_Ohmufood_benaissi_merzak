@@ -4,8 +4,8 @@
 //sur la page style.css
 
 
-//L'ajout de @charset 'utf-8'; au début de votre fichier Sass 
-//indique au navigateur que le fichier CSS généré doit être interprété 
+//L'ajout de @charset 'utf-8',indique au navigateur que 
+//le fichier CSS généré doit être interprété 
 //en utilisant l'encodage UTF-8.
 @charset 'utf-8';
 
@@ -19,6 +19,7 @@
 @import "./components/buttons";
 @import "./components/loader";
 @import "./components/card";
+@import "./components/article";
 
 @import "./layout/header";
 @import "./layout/container";
