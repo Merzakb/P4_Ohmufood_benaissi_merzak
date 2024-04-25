@@ -5,7 +5,7 @@
 ![Logo](assets/images/logo/ohmyfood.png)
 
 Ohmyfood is a website that lists menus from gourmet restaurants. 
-It's site is coded in HTML, CSS, and Sass.
+It's coded in HTML, CSS, and Sass.
 
 ## Screenshots
 
