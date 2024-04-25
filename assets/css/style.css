@@ -1,5 +1,3 @@
-/*# sourceMappingURL=style.css.map */
-
 @keyframes button-headshake {
   25% {
     transform: translateY(7%);
@@ -540,7 +538,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
   height: 100%;
   background-color: #99E2D0;
@@ -894,4 +891,4 @@ body {
   background: #99E2D0;
 }
 
-
+/*# sourceMappingURL=style.css.map */
